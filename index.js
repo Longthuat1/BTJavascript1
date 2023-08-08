@@ -1,47 +1,62 @@
-// Bài 1 
-var salary, day, total ;
-salary = 100000;
-day = 30;
-total = salary * day;
-console.log('total : ',total);
+// Bài 1
+
+document.getElementById('hanldeSalary').onclick = function() {
+    var dayWork = +document.getElementById('dayWork').value;
+    var salary = +document.getElementById('salary').value;
+    var totalSalary = dayWork * salary ;
+    document.getElementById('resultSalary').innerHTML = `Tổng lương : ${totalSalary}`;
+}
+
 
 // Bài 2
-var a, b, c, d, e, average;
-a = 1;
-b = 2;
-c = 3;
-d = 4;
-e = 5;
-average = (a + b + c + d +e)/5;
-console.log('average : ',average);
 
-// Bài 3 
-var USD, VND, EX;
-VND = 23500 ;
-USD = 1 ;
-EX = 2 * USD * VND ;
-console.log('EX : ',EX);
+document.getElementById('hanldeAverage').onclick = function() {
+    var a = +document.getElementById('a').value;
+    var b = +document.getElementById('b').value;
+    var c = +document.getElementById('c').value;
+    var d = +document.getElementById('d').value;
+    var e = +document.getElementById('e').value;
 
-// Bài 4 
+    var Average = (a + b + c + d + e)/5 ;
+    document.getElementById('resultAverage').innerHTML = `Average : ${Average}`;
+}
+//  Bài 3
 
-var length , width, area, perimeter ;
-length = 20 ; 
-width = 10 ;
-area = length * width ;
-perimeter = ( length + width)*2
-console.log('area : ',area);
-console.log('perimeter : ',perimeter);
+document.getElementById('hanldeUSD').onclick = function() {
+    var USD = +document.getElementById('USD').value;
+    var VND = USD * 23500 ;
+    document.getElementById('resultUSD').innerHTML = `Thành tiền : ${VND} VND`;
+}
 
-// Bài 5 
 
-var n = 24 ;
-var unit,  ten, sum ;
-unit = n % 10 ;
-ten = Math.floor((n % 100)/10);
-sum = unit + ten ;
-console.log('unit : ',unit);
-console.log('ten : ',ten);
-console.log('sum : ',sum);
+// Bài 4   
+
+document.getElementById('hanldeArea').onclick = function() {
+    var length = +document.getElementById('length').value;
+    var width = +document.getElementById('width').value;
+    var area = length * width ;
+    document.getElementById('resultArea').innerHTML = `Diện tích : ${area}`;
+
+}
+document.getElementById('hanldePerimeter').onclick = function() {
+    var length = +document.getElementById('length').value;
+    var width = +document.getElementById('width').value;
+    var perimeter = ( length + width ) * 2
+    document.getElementById('resultArea').innerHTML = `Chu vi : ${perimeter}`;
+
+}
+
+
+// Bài 5  
+
+document.getElementById('hanldeN').onclick = function() {
+    var n = +document.getElementById('n').value;
+    var unit = n % 10 ;
+    var ten = Math.floor((n % 100)/10);
+    var sum = unit + ten ; 
+    document.getElementById('resultN').innerHTML = `Tổng : ${sum}`;
+
+}
 
 
 
